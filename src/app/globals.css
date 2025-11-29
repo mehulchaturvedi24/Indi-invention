@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: 0 0% 100%;
+  --foreground: 224 71.4% 4.1%;
+
+  --muted: 220 14.3% 95.9%;
+  --muted-foreground: 220 8.9% 46.1%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 71.4% 4.1%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 224 71.4% 4.1%;
+
+  --border: 220 13% 91%;
+  --input: 220 13% 91%;
+
+  --primary: 221.2 83.2% 53.3%;
+  --primary-foreground: 210 20% 98%;
+
+  --secondary: 220 14.3% 95.9%;
+  --secondary-foreground: 220.9 39.3% 11%;
+
+  --accent: 210 22% 89%;
+  --accent-foreground: 222.2 47.4% 11.2%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  --ring: 221.2 83.2% 53.3%;
+
+  --radius: 0.75rem;
+
+  --chart-primary: 220 70% 50%;
+  --chart-1: 220 70% 50%;
+  --chart-2: 267 75% 60%;
+  --chart-3: 43 89% 58%;
+  --chart-4: 150 60% 45%;
+  --chart-5: 340 75% 55%;
+}
+
+.dark {
+  --background: 224 71.4% 4.1%;
+  --foreground: 210 20% 98%;
+
+  --muted: 215 27.9% 16.9%;
+  --muted-foreground: 217.9 10.6% 64.9%;
+
+  --popover: 224 71.4% 4.1%;
+  --popover-foreground: 210 20% 98%;
+
+  --card: 224 71.4% 4.1%;
+  --card-foreground: 210 20% 98%;
+
+  --border: 215 27.9% 16.9%;
+  --input: 215 27.9% 16.9%;
+
+  --primary: 217.2 91.2% 59.8%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+
+  --secondary: 215 27.9% 16.9%;
+  --secondary-foreground: 210 20% 98%;
+
+  --accent: 215 27.9% 16.9%;
+  --accent-foreground: 210 20% 98%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 20% 98%;
+
+  --ring: 217.2 91.2% 59.8%;
+
+  --chart-primary: 210 60% 52%;
+  --chart-1: 210 60% 52%;
+  --chart-2: 168 70% 45%;
+  --chart-3: 30 80% 55%;
+  --chart-4: 280 70% 60%;
+  --chart-5: 350 80% 65%;
+}
+
+* {
+  @apply border-border;
+}
+
+body {
+  @apply bg-background text-foreground;
+}
+
+.card-gradient {
+  background: linear-gradient(135deg, hsl(var(--primary) / 0.1), hsl(var(--accent) / 0.1));
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
